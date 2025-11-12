@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import About from './About'
-import Home from './Home'
+import About from '../About/About'
+import Home from '../Home/Home'
 
 function Routing(){
     return(
