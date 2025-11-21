@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Todos.css"
 
 type Todo = {
   text: string;
@@ -29,14 +30,15 @@ export default function Todos() {
   };
 
   return (
-    <div>
+    <div className="todos-container">
       <input
+      className="todos-input-container"
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button onClick={add}>Add</button>
-      <button onClick={removeDone}>Delete all done</button>
+      <button onClick={add} className="add-button">Add</button>
+      <button onClick={removeDone} className="delete-button">Delete all done</button>
       <ul>
         {list.map((item, index) => (
           <li key={index}>
@@ -45,7 +47,10 @@ export default function Todos() {
               checked={item.done}
               onChange={() => markDone(index)}
             />
-            {item.text}
+            <span className={item.done ? "done" : ""}>
+                {item.text}
+            </span>
+
             <button onClick={() => remove(index)}>X</button>
           </li>
         ))}
