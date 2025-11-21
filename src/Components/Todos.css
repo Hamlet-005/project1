@@ -1,0 +1,21 @@
+.todos-container{
+    color: red;
+}
+.done{
+    background-color: rgb(58, 213, 58);
+}
+.delete-button{
+    height: 40px;
+    border: 2px solid rgb(53, 12, 176);
+    margin-left: 10px;
+}
+.add-button{
+    height: 40px;
+    border: 2px solid rgb(53, 12, 176);
+    margin-left: 10px;
+}
+.todos-input-container{
+    border: 2px solid rgb(53, 12, 176);
+    height: 23px;
+    margin-left: 5px;
+}
